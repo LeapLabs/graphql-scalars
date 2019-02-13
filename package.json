@@ -1,6 +1,6 @@
 {
   "name": "@okgrow/graphql-scalars",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "A collection of scalar types not included in base GraphQL.",
   "repository": {
     "type": "git",
@@ -32,13 +32,13 @@
     "@babel/cli": "^7.2.3",
     "@babel/preset-env": "^7.3.1",
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.12.1",
+    "eslint": "^5.13.0",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.15.0",
-    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
     "graphql": "^14.1.1",
-    "jest": "^24.0.0"
+    "jest": "^24.1.0"
   },
   "peerDependencies": {
     "graphql": ">=0.13.1"
