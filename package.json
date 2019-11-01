@@ -1,6 +1,6 @@
 {
   "name": "@looop/graphql-scalars",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "A collection of scalar types not included in base GraphQL.",
   "repository": {
     "type": "git",

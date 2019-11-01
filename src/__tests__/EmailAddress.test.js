@@ -66,7 +66,7 @@ describe('EmailAddress', () => {
           EmailAddressWithTLD.serialize('test@localDomains'),
         ).toThrow(/Value is not a valid email address/);
 
-        expect(() => EmailAddressWithTLD.serialize('test@badTLD.t')).toThrow(
+        expect(() => EmailAddressWithTLD.serialize('test@notTLD.')).toThrow(
           /Value is not a valid email address/,
         );
       });
@@ -76,7 +76,7 @@ describe('EmailAddress', () => {
           EmailAddressWithTLD.parseValue('test@localDomain'),
         ).toThrow(/Value is not a valid email address/);
 
-        expect(() => EmailAddressWithTLD.parseValue('test@badTLD.t')).toThrow(
+        expect(() => EmailAddressWithTLD.parseValue('test@notTLD.')).toThrow(
           /Value is not a valid email address/,
         );
       });
