@@ -7,7 +7,11 @@ import NonPositiveFloat from './NonPositiveFloat';
 import PositiveFloat from './PositiveFloat';
 import NonNegativeFloat from './NonNegativeFloat';
 import NegativeFloat from './NegativeFloat';
-import { EmailAddress, EmailAddressWithTLD } from './EmailAddress';
+import {
+  EmailAddress,
+  EmailAddressWithTLD,
+  EMAIL_ADDRESS_REGEX_WITH_TLD,
+} from './EmailAddress';
 import URL from './URL';
 import PhoneNumber from './PhoneNumber';
 import PostalCode from './PostalCode';
@@ -69,6 +73,7 @@ export {
   UnsignedFloatScalar,
   UnsignedIntScalar,
   URLScalar,
+  EMAIL_ADDRESS_REGEX_WITH_TLD,
 };
 
 export default {

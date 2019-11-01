@@ -1,6 +1,7 @@
 import { GraphQLScalarType } from 'graphql';
 
 export declare const EmailAddress: GraphQLScalarType;
+export declare const EmailAddressWithTLD: GraphQLScalarType;
 export declare const DateTime: GraphQLScalarType;
 export declare const NonPositiveInt: GraphQLScalarType;
 export declare const PositiveInt: GraphQLScalarType;
@@ -13,6 +14,7 @@ export declare const NegativeFloat: GraphQLScalarType;
 export declare const URL: GraphQLScalarType;
 export declare const PhoneNumber: GraphQLScalarType;
 export declare const PostalCode: GraphQLScalarType;
+export declare const EMAIL_ADDRESS_REGEX_WITH_TLD: RegExp;
 
 export declare class RegularExpression extends GraphQLScalarType {
   constructor(name: string, regex: RegExp);
