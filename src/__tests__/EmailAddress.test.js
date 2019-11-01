@@ -2,7 +2,7 @@
 
 import { Kind } from 'graphql/language';
 
-import { EmailAddress } from '..';
+import { EmailAddress, EmailAddressWithTLD } from '..';
 
 describe('EmailAddress', () => {
   describe('valid', () => {
@@ -10,8 +10,20 @@ describe('EmailAddress', () => {
       expect(EmailAddress.serialize('test@test.com')).toBe('test@test.com');
     });
 
+    test('serialize', () => {
+      expect(EmailAddress.serialize('test@localDomain')).toBe(
+        'test@localDomain',
+      );
+    });
+
     test('parseValue', () => {
       expect(EmailAddress.parseValue('test@test.com')).toBe('test@test.com');
+    });
+
+    test('parseValue', () => {
+      expect(EmailAddress.parseValue('test@localDomain')).toBe(
+        'test@localDomain',
+      );
     });
 
     test('parseLiteral', () => {
@@ -45,6 +57,28 @@ describe('EmailAddress', () => {
             kind: Kind.STRING,
           }),
         ).toThrow(/Value is not a valid email address/);
+      });
+    });
+
+    describe('no TLD', () => {
+      test('serialize', () => {
+        expect(() =>
+          EmailAddressWithTLD.serialize('test@localDomains'),
+        ).toThrow(/Value is not a valid email address/);
+
+        expect(() => EmailAddressWithTLD.serialize('test@badTLD.t')).toThrow(
+          /Value is not a valid email address/,
+        );
+      });
+
+      test('parseValue', () => {
+        expect(() =>
+          EmailAddressWithTLD.parseValue('test@localDomain'),
+        ).toThrow(/Value is not a valid email address/);
+
+        expect(() => EmailAddressWithTLD.parseValue('test@badTLD.t')).toThrow(
+          /Value is not a valid email address/,
+        );
       });
     });
 

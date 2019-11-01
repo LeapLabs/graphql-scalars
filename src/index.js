@@ -7,7 +7,7 @@ import NonPositiveFloat from './NonPositiveFloat';
 import PositiveFloat from './PositiveFloat';
 import NonNegativeFloat from './NonNegativeFloat';
 import NegativeFloat from './NegativeFloat';
-import EmailAddress from './EmailAddress';
+import { EmailAddress, EmailAddressWithTLD } from './EmailAddress';
 import URL from './URL';
 import PhoneNumber from './PhoneNumber';
 import PostalCode from './PostalCode';
@@ -47,6 +47,7 @@ export {
   NonNegativeFloat as UnsignedFloat,
   NegativeFloat,
   EmailAddress,
+  EmailAddressWithTLD,
   URL,
   PhoneNumber,
   PostalCode,
@@ -82,6 +83,7 @@ export default {
   UnsignedFloat: NonNegativeFloat,
   NegativeFloat,
   EmailAddress,
+  EmailAddressWithTLD,
   URL,
   PhoneNumber,
   PostalCode,
