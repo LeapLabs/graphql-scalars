@@ -42,11 +42,19 @@ describe('EmailAddress', () => {
         expect(() =>
           EmailAddress.serialize('this is not an email address'),
         ).toThrow(/Value is not a valid email address/);
+
+        expect(() =>
+          EmailAddress.serialize('utf8charslikešė@gmail.com'),
+        ).toThrow(/Value is not a valid email address/);
       });
 
       test('parseValue', () => {
         expect(() =>
           EmailAddress.parseValue('this is not an email address'),
+        ).toThrow(/Value is not a valid email address/);
+
+        expect(() =>
+          EmailAddress.parseValue('utf8charslikešė@gmail.com'),
         ).toThrow(/Value is not a valid email address/);
       });
 
@@ -69,6 +77,10 @@ describe('EmailAddress', () => {
         expect(() => EmailAddressWithTLD.serialize('test@notTLD.')).toThrow(
           /Value is not a valid email address/,
         );
+
+        expect(() =>
+          EmailAddressWithTLD.serialize('utf8charslikešė@gmail.com'),
+        ).toThrow(/Value is not a valid email address/);
       });
 
       test('parseValue', () => {
@@ -79,6 +91,10 @@ describe('EmailAddress', () => {
         expect(() => EmailAddressWithTLD.parseValue('test@notTLD.')).toThrow(
           /Value is not a valid email address/,
         );
+
+        expect(() =>
+          EmailAddressWithTLD.parseValue('utf8charslikešė@gmail.com'),
+        ).toThrow(/Value is not a valid email address/);
       });
     });
 
