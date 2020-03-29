@@ -36,4 +36,4 @@ export declare const URLScalar: string;
 export declare const PhoneNumberScalar: string;
 export declare const PostalCodeScalar: string;
 export declare const RegularExpressionScalar: string;
-export declare const OKGScalarDefinitions: string[];
+export declare const ScalarDefinitions: string[];

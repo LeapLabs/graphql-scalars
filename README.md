@@ -1,4 +1,4 @@
-# @okgrow/graphql-scalars
+# @looop/graphql-scalars
 
 [![npm version](https://badge.fury.io/js/%40okgrow%2Fgraphql-scalars.svg)](https://badge.fury.io/js/%40okgrow%2Fgraphql-scalars)
 [![Build Status](https://semaphoreci.com/api/v1/projects/649ab71f-35fe-440e-8e4b-3f68aaad0f2a/1545482/shields_badge.svg)](https://semaphoreci.com/okgrow/graphql-scalars)
@@ -8,13 +8,13 @@
 ## Installation
 
 ```
-npm install --save @okgrow/graphql-scalars
+npm install --save @looop/graphql-scalars
 ```
 
 or
 
 ```
-yarn add @okgrow/graphql-scalars
+yarn add @looop/graphql-scalars
 ```
 
 ## Usage
@@ -76,7 +76,7 @@ import {
   URL,
   PhoneNumber,
   PostalCode,
-} from '@okgrow/graphql-scalars';
+} from '@looop/graphql-scalars';
 ```
 
 Then make sure they're in the root resolver map like this:
@@ -117,14 +117,14 @@ and `UnsignedInt`, respectively.
 Alternatively, use the default import and ES6's spread operator syntax:
 
 ```javascript
-import OKGGraphQLScalars from '@okgrow/graphql-scalars';
+import GraphQLScalars from '@looop/graphql-scalars';
 ```
 
 Then make sure they're in the root resolver map like this:
 
 ```javascript
 const myResolverMap = {
-  ...OKGGraphQLScalars,
+  ...GraphQLScalars,
 
   Query: {
     // more stuff here
@@ -165,24 +165,24 @@ These scalars can be used just like the base, built-in ones.
 import { ApolloServer } from 'apollo-server';
 import { makeExecutableSchema } from 'graphql-tools';
 // import all scalars and resolvers
-import OKGGraphQLScalars, {
-  OKGScalarDefinitions,
-} from '@okgrow/graphql-scalars';
+import GraphQLScalars, {
+  ScalarDefinitions,
+} from '@looop/graphql-scalars';
 // Alternatively, import individual scalars and resolvers
-// import { DateTime, DateTimeScalar, ... } from "@okgrow/graphql-scalars"
+// import { DateTime, DateTimeScalar, ... } from "@looop/graphql-scalars"
 
 const server = new ApolloServer({
   schema: makeExecutableSchema({
     typeDefs: [
       // use spread syntax to add scalar definitions to your schema
-      ...OKGScalarDefinitions,
+      ...ScalarDefinitions,
       // DateTimeScalar,
       // ...
       // ... other type definitions ...
     ],
     resolvers: {
       // use spread syntax to add scalar resolvers to your resolver map
-      ...OKGGraphQLScalars,
+      ...GraphQLScalars,
       // DateTime,
       // ...
       // ... remainder of resolver map ...

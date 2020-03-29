@@ -35,7 +35,7 @@ import {
   URLScalar,
 } from './scalars';
 
-export { default as OKGScalarDefinitions } from './scalars';
+export { default as ScalarDefinitions } from './scalars';
 
 export {
   // Resolvers

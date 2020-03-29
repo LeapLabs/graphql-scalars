@@ -34,7 +34,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Added `./src/scalars.js` which defines and exports GraphQL scalar definitions as strings, both
   individually and as an array. (Credit: [@Saeris](https://github.com/Saeris))
 - `./src/index.js` now exports the scalar definitions both individually and the array of scalar
-  definitions as `OKGScalarDefinitions`. (Credit: [@Saeris](https://github.com/Saeris))
+  definitions as `ScalarDefinitions`. (Credit: [@Saeris](https://github.com/Saeris))
 - Added new usage documentation for Apollo Server to the README. Updated the list of scalars to
   include `RegularExpression`, `UnsignedInt` and `UnsignedFloat`.
   (Credit: [@Saeris](https://github.com/Saeris))
@@ -88,4 +88,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
-- Initial Release - released as [`@okgrow/graphql-scalars`](https://www.npmjs.com/package/@okgrow/graphql-scalars) on npm.
+- Initial Release - released as [`@looop/graphql-scalars`](https://www.npmjs.com/package/@looop/graphql-scalars) on npm.

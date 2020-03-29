@@ -1,6 +1,6 @@
 {
   "name": "@looop/graphql-scalars",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "A collection of scalar types not included in base GraphQL.",
   "repository": {
     "type": "git",
@@ -29,18 +29,18 @@
     "start": "babel src -d dist --watch"
   },
   "devDependencies": {
-    "@babel/cli": "^7.6.4",
-    "@babel/preset-env": "^7.6.3",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.6.0",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-plugin-import": "^2.18.2",
+    "@babel/cli": "^7.8.4",
+    "@babel/preset-env": "^7.9.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react": "^7.19.0",
     "graphql": "^14.1.1",
-    "jest": "^24.9.0"
+    "jest": "^25.2.3"
   },
   "peerDependencies": {
-    "graphql": "^0.13 || ^14"
+    "graphql": "^14"
   }
 }
