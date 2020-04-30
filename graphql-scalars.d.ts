@@ -15,6 +15,7 @@ export declare const URL: GraphQLScalarType;
 export declare const PhoneNumber: GraphQLScalarType;
 export declare const PostalCode: GraphQLScalarType;
 export declare const EMAIL_ADDRESS_REGEX_WITH_TLD: RegExp;
+export declare const EMAIL_ADDRESS_REGEX: RegExp;
 
 export declare class RegularExpression extends GraphQLScalarType {
   constructor(name: string, regex: RegExp);

@@ -165,9 +165,7 @@ These scalars can be used just like the base, built-in ones.
 import { ApolloServer } from 'apollo-server';
 import { makeExecutableSchema } from 'graphql-tools';
 // import all scalars and resolvers
-import GraphQLScalars, {
-  ScalarDefinitions,
-} from '@looop/graphql-scalars';
+import GraphQLScalars, { ScalarDefinitions } from '@looop/graphql-scalars';
 // Alternatively, import individual scalars and resolvers
 // import { DateTime, DateTimeScalar, ... } from "@looop/graphql-scalars"
 

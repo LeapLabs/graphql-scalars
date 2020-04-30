@@ -40,9 +40,7 @@ function RegularExpression(name, regex, options = {}) {
     parseLiteral(ast) {
       if (ast.kind !== Kind.STRING) {
         throw new GraphQLError(
-          `Can only validate strings as regular expressions but got a: ${
-            ast.kind
-          }`,
+          `Can only validate strings as regular expressions but got a: ${ast.kind}`,
         );
       }
 

@@ -240,20 +240,23 @@ describe('PostalCode', () => {
   describe('invalid', () => {
     describe('not a phone number', () => {
       test('serialize', () => {
-        expect(() => PostalCode.serialize('this is not a phone number')).toThrow(
-          /^Value is not a valid postal code/,
-        );
+        expect(() =>
+          PostalCode.serialize('this is not a phone number'),
+        ).toThrow(/^Value is not a valid postal code/);
       });
 
       test('parseValue', () => {
-        expect(() => PostalCode.parseValue('this is not a phone number')).toThrow(
-          /^Value is not a valid postal code/,
-        );
+        expect(() =>
+          PostalCode.parseValue('this is not a phone number'),
+        ).toThrow(/^Value is not a valid postal code/);
       });
 
       test('parseLiteral', () => {
         expect(() =>
-          PostalCode.parseLiteral({ value: 'this is not a phone number', kind: Kind.STRING }),
+          PostalCode.parseLiteral({
+            value: 'this is not a phone number',
+            kind: Kind.STRING,
+          }),
         ).toThrow(/^Value is not a valid postal code/);
       });
     });
@@ -268,9 +271,9 @@ describe('PostalCode', () => {
       });
 
       test('parseLiteral', () => {
-        expect(() => PostalCode.parseLiteral({ value: 123, kind: Kind.INT })).toThrow(
-          /Can only validate strings as phone numbers but got a/,
-        );
+        expect(() =>
+          PostalCode.parseLiteral({ value: 123, kind: Kind.INT }),
+        ).toThrow(/Can only validate strings as phone numbers but got a/);
       });
     });
   });

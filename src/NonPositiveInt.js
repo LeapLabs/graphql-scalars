@@ -20,9 +20,7 @@ export default new GraphQLScalarType({
   parseLiteral(ast) {
     if (ast.kind !== Kind.INT) {
       throw new GraphQLError(
-        `Can only validate integers as non-positive integers but got a: ${
-          ast.kind
-        }`,
+        `Can only validate integers as non-positive integers but got a: ${ast.kind}`,
       );
     }
 

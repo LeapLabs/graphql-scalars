@@ -92,7 +92,7 @@ const SHOULD_NOT_MATCH = [
 describe('URL', () => {
   describe('valid', () => {
     // eslint-disable-next-line
-    SHOULD_MATCH.forEach(url => {
+    SHOULD_MATCH.forEach((url) => {
       test(`serialize ${url}`, () => {
         expect(URL.serialize(url)).toBe(url);
       });
@@ -144,7 +144,7 @@ describe('URL', () => {
   describe('invalid', () => {
     describe('not a URL', () => {
       // eslint-disable-next-line
-      SHOULD_NOT_MATCH.forEach(url => {
+      SHOULD_NOT_MATCH.forEach((url) => {
         test(`serialize ${url}`, () => {
           expect(() => URL.serialize(url)).toThrow(/Value is not a valid URL/);
         });
